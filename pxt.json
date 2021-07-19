@@ -9,6 +9,9 @@
     "files": [
         "main.blocks",
         "main.ts",
+        "Definition.ts",
+        "Options.ts",
+        "Quadruped.ts",
         "README.md"
     ],
     "testFiles": [
