@@ -4,11 +4,10 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "Asr_V3": "github:YahboomTechnology/Asr_V3#6d5377c51ee7143c144c7655beff6c0ccb2b1cef"
     },
     "files": [
-        "main.blocks",
-        "main.ts",
         "Definition.ts",
         "Options.ts",
         "Quadruped.ts",
