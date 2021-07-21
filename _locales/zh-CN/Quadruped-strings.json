@@ -54,6 +54,7 @@
     "gesture.clockwise|block": "顺时针",
     "gesture.count_clockwise|block": "逆时针",
     "gesture.wave|block": "挥手",
+    "Position.Content_V|block": "内容值",
     "Position.X_axis|block": "X轴",
     "Position.Y_axis|block": "Y轴",
     "Position.Z_axis|block": "Z轴",
