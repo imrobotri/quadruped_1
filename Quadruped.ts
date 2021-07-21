@@ -456,6 +456,7 @@ namespace Quadruped {
         Identify_send()
         Identify_receive()
         switch (data) {
+            case Position.Content_V: return Identify_pattern; break;
             case Position.X_axis: return Identify_x; break;
             case Position.Y_axis: return Identify_x; break;
             case Position.Z_axis: return Identify_x; break;

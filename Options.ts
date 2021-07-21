@@ -93,6 +93,8 @@ enum Unit {
 
 //Position value||位置值
 enum Position {
+    //% block="Content V"
+    Content_V,
     //% block="X axis"
     X_axis,
     //% block="Y axis"
@@ -109,6 +111,7 @@ enum Position {
 
 //Ball position||球的位置值
 enum Ball_Position {
+
     //% block="X axis"
     X_axis,
     //% block="Y axis"
