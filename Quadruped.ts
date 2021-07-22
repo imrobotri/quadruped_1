@@ -503,6 +503,7 @@ namespace Quadruped {
         Identify_send()
         Identify_receive()
         switch (P) {
+            case Ball_Position.status: return Ball_status
             case Ball_Position.X_axis: return Ball_X
             case Ball_Position.Y_axis: return Ball_Y
             case Ball_Position.Width: return Ball_W

@@ -111,7 +111,8 @@ enum Position {
 
 //Ball position||球的位置值
 enum Ball_Position {
-
+    //% block="status"
+    status,
     //% block="X axis"
     X_axis,
     //% block="Y axis"
