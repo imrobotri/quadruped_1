@@ -477,7 +477,7 @@ namespace Quadruped {
     //% blockGap=8
     //% blockId=sensor_Line_return block="Line patrol return value| %x"
     export function Line_return(X: Line_Position): number {
-        Function_c = 0x96
+        Function_c = 0x60
         Function_s = 3
         Identify_send()
         Identify_receive()
@@ -498,7 +498,7 @@ namespace Quadruped {
     //% blockGap=8
     //% blockId=sensor_Ball_return block="Ball returnvalue| %P"
     export function Ball_return(P: Ball_Position): number {
-        Function_c = 0x36
+        Function_c = 0x24
         Function_s = 2
         Identify_send()
         Identify_receive()
