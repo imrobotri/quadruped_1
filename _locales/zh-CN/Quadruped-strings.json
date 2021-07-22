@@ -66,7 +66,7 @@
     "Ball_Position.Y_axis|block": "Y轴",
     "Ball_Position.Width|block": "宽度",
     "Ball_Position.Depth|block": "高度",
-    "Ball_Position.Pixel|block": "识别效果值",
+    "Ball_Position.Re_effect|block": "识别效果值",
     "Line_Position.status|block": "状态",
     "Line_Position.Re_effect|block": "识别效果",
     "Line_Position.De_angle|block": "偏差角度",
