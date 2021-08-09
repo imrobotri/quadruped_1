@@ -1,4 +1,4 @@
-//############Movement direction||运动方向
+ //############Movement direction||运动方向
 enum Mov_dir {
     //% block="Forward"
     For,
@@ -35,9 +35,9 @@ enum gait {
     //% block="Trot"
     Trot,
     //% block="Run_fast"
-    Run_fast,
-    //% block="Crawl"
-    Crawl
+    Run_fast
+//    //% block="Crawl"
+//    Crawl
 }
 
 //############Infrared||红外

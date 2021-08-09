@@ -29,6 +29,7 @@
     "Quadruped.Joint|block":"关节角度 | %j|大腿 %d|小腿 %x|侧腿 %c| %s",
     "Quadruped.Joint_Heartbeat|block":"关节心跳",
     "gait.Trot|block": "小跑",
+    "gait.Crawl|block": "爬行",
     "obstacle_t.Obstacle|block":"障碍",
     "obstacle_t.No_Obstacle|block":"无障碍",
     "obstacle_p.Someone|block": "有人",

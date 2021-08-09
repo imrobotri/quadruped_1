@@ -368,7 +368,7 @@ function voice_data() {
         case 0x03: Quadruped.Stop(); break;
         case 0x04: Quadruped.Reset; Quadruped.Stand(); break;
         case 0x05: Quadruped.Reset; Quadruped.Gait(gait.Trot); break;
-        case 0x06: Quadruped.Reset; Quadruped.Gait(gait.Crawl); break;
+        //case 0x06: Quadruped.Reset; Quadruped.Gait(gait.Crawl); break;
         case 0x07: Quadruped.Height(10); break;
         case 0x08: Quadruped.Height(4); break;
         case 0x09: Quadruped.Reset; Quadruped.Control_s(Mov_dir.For, voice_speed, 50); break;
