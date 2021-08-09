@@ -337,7 +337,7 @@ namespace Quadruped {
     //% subcategory=sensor
     //% blockGap=8
     //% blockId=sensor_Human_Infrared block="Human Infrared |pin %pin |mode %value"
-    export function Human_induction(pin: AnalogPin, value: obstacle_p): number {
+    export function Human_induction(pin: AnalogPin, value=50): number {
         let w = pins.analogReadPin(pin)
         if (w >= value)
             return 1
