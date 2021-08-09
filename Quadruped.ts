@@ -6,7 +6,7 @@
 namespace Quadruped {
 
     /**
-     *TODO:SPI and data initialization before startup，No return value
+     *TODO:Initialization: define the communication pins and related settings of microbit and adapter board (initialization is required before basic control, external steering gear control and joint control).After initial, the LED dot matrix screen of microbit cannot be used
      */
     //% group="Set up"
     //% blockGap=8
@@ -16,7 +16,7 @@ namespace Quadruped {
     }
     //###return hexadecimal number||返回状态信息
     /**
-    * TODO:Chassis feedback information, return hexadecimal number
+    * TODO:Return information: return the status information of the robot itself (0x13 is trotting, 0x00 is idle, 0x01 is powered on, 0x06 is crawling, 0x08 is falling mode)
     */
     //% group="control"
     //% blockGap=8
@@ -26,7 +26,7 @@ namespace Quadruped {
     }
     //####Reset||复位
     /**
-     *TODO:Control speed direction, angle reset (value is 0)
+     *TODO:the movement speed and attitude angle are reset to 0
      */
     //% group="control"
     //% blockGap=8
@@ -43,8 +43,7 @@ namespace Quadruped {
     }
 
     /**
-     * TODO:Set the height of the fuselage
-     * @param h，Fill in the value 0-10, the corresponding is from bottom to high，eg：10
+     * TODO: height adjustment of robot body (0-10 range adjustment, 0 is the lowest and 10 is the highest)
      */
     //% group="control"
     //% blockGap=8
@@ -56,8 +55,7 @@ namespace Quadruped {
     }
     //###Start||启动
     /**
-     * TODO:Set the height of the fuselage
-     * @param h，Fill in the value 0-10, the corresponding is from bottom to high，eg：10
+     * TODO:the robot is powered on and enters the semi squatting state（Start sending instructions internally, and the basic control needs to start initialization start before other building blocks can be used)
      */
     //% group="control"
     //% blockGap=8
@@ -81,7 +79,7 @@ namespace Quadruped {
     }
     //###Quadruped Stand||站立
     /**
-     * TODO:Enter standing mode from other sports mode, no return value
+     * TODO:the machine enters standing mode（In trotting and crawling gait, you need to stop in place, you can add this building block to enter standing mode)
      */
     //% group="control"
     //% blockGap=8
@@ -91,7 +89,7 @@ namespace Quadruped {
     }
     //####Quadruped Fall recovery||摔倒恢复
     /**
-     * TODO:Fall into self-recovery and enter standing mode
+     * TODO:automatically detect whether to enter fall mode, and then automatically enter fall recovery
      */
     //% group="control"
     //% blockGap=8
@@ -110,7 +108,7 @@ namespace Quadruped {
     }
     //###Heartbeat||心跳
     /**
-     * TODO:Continue to communicate with the quadrupeds
+     * TODO:continuously send the instruction information set before (to prevent machine communication loss)
      */
     //% group="control"
     //% blockGap=8
@@ -121,7 +119,7 @@ namespace Quadruped {
     }
     //###Stop||停止
     /**
-     * TODO:Squat down and stop communicating with the master
+     * TODO:enter the power-off mode and the fuselage squats down (internal stop sending command)
      */
     //% group="control"
     //% blockGap=8
@@ -140,7 +138,7 @@ namespace Quadruped {
     }
     //###gait||步态
     /**
-     * TODO:Continue to communicate with the quadrupeds
+     * TODO:two options: trot and crawl（Note: crawling gait can only be used when the fuselage is at the highest state)
      */
     //% group="control"
     //% blockGap=8
@@ -182,10 +180,7 @@ namespace Quadruped {
     }
     //###Movement direction and speed||运动方向与速度
     /**
-    * TODO:Control direction, speed, time
-    * @param m Choose movement direction
-    * @param speed1 Select speed (0-10), corresponding to slow-fast
-    * @param time1 excercise time
+    * TODO:forward and backward, left and right movement, left and right rotation speed control.Time in milliseconds
     */
     //% group="control"
     //% blockGap=8
@@ -217,10 +212,7 @@ namespace Quadruped {
     }
     //###Control angle||控制角度
     /**
-    * TODO:Control direction, speed, time
-    * @param m Choose movement direction
-    * @param speed1 Select speed (0-10), corresponding to slow-fast
-    * @param time1 excercise time
+    * TODO:angle control of left-right swing, head up, head down and left-right twist.Time in milliseconds
     */
     //% group="control"
     //% blockGap=8
@@ -260,8 +252,7 @@ namespace Quadruped {
 
     //###Joint angle control||关节控制
     /**
-    * TODO:Angle control of each joint
-    * @param a： angle
+    * TODO:select the corresponding leg, joint angle and whether to implement the command of the current building block
     */
     //% group="Joint angle control"
     //% blockGap=8
@@ -278,7 +269,7 @@ namespace Quadruped {
     }
     //###Joint Heartbeat||关节心跳
     /**
-    * TODO:Joint Heartbeat
+    * TODO:continuously send the previously set command information (to prevent machine communication loss)
     */
     //% group="Joint angle control"
     //% blockGap=8
@@ -290,10 +281,7 @@ namespace Quadruped {
 
     //###Ultrasound||超声波
     /**
-    * TODO:Select the transmitting pin, receiving pin, and the distance unit that has been returned
-    * @param trig： Select transmit pin（P0-P3）
-    * @param echo： Select receiving pin（P0-P3）
-    * @param unit： Select unit: us, cm, inches
+    * TODO:Select the transmitting and receiving pins corresponding to ultrasonic, and select the unit of returned data
     */
     //% subcategory=sensor
     //% blockGap=8
@@ -317,9 +305,7 @@ namespace Quadruped {
     }
     //###Infrared||红外
     /**
-     * TODO:Select the receiving pin, return 1 if there is an obstacle, 0 return if there is no
-     * @param pin：Select the receiving pin (P0-P3)
-     * @param pin：Select mode
+     * TODO:select the data receiving pin (return 1 to recognize the human body, 0 not recognized)
      */
     //% subcategory=sensor
     //% blockGap=8
@@ -330,9 +316,7 @@ namespace Quadruped {
     }
     //###Human body induction||人体感应
     /**
-    * TODO:Receive pin selection, some people return 1 and no one returns 0
-    * @param pin：Select the receiving pin (P0-P3)
-    * @param pin：Select mode
+    * TODO:select the data receiving pin (return 1 to recognize the human body, 0 not recognized)
     */
     //% subcategory=sensor
     //% blockGap=8
@@ -345,7 +329,7 @@ namespace Quadruped {
     }
     //###GestureInit||手势初始化
     /**
-    * IODO:Initialize gesture recognition (success: 0 failure: 255)
+    * IODO:gesture related pins, configuration settings(success: 0 failure: 255)
     */
     //% subcategory=sensor
     //% blockGap=8
@@ -366,7 +350,7 @@ namespace Quadruped {
     }
     //###GetGesture||获取手势
     /**
-    * IODO:Get the result value of gesture recognition||获取手势识别的结果值
+    * IODO:returns the value of gesture direction
     */
     //% subcategory=sensor
     //% blockGap=8
@@ -397,7 +381,7 @@ namespace Quadruped {
 
     //###Select_gesture_as||选择手势为
     /**
-    * IODO:Select gesture as,Return the corresponding value||选择手势为，返回对应值
+    * IODO:defines the value of gesture direction
     */
     //% subcategory=sensor
     //% blockGap=8
@@ -408,8 +392,7 @@ namespace Quadruped {
 
     //###Steering gear control||舵机控制
     /**
-    * IODO:The servo number is the same as the pin number, PWM is for the angle, the rotation speed (0 fast -9 slow)
-    * IODO：舵机号与引脚号相同，PWM为角度，转速（0快-9慢）
+    * IODO:select the external control pin, PWM value range: 500-2500 (0 ° - 180 °), speed: the response speed of steering gear: 0-10 (0 is fast - 10 bit slow)
     */
     //% group="Additional steering gear control"
     //% blockGap=8
@@ -436,7 +419,7 @@ namespace Quadruped {
 
     //###Image recognition initialization||图像识别初始化
     /**
-    * IODO:Initial communication
+    * IODO:Image recognition internal related pins and initialization of settings
     */
     //% subcategory=sensor
     //% blockGap=8
@@ -447,7 +430,7 @@ namespace Quadruped {
 
     //###QR code position return value||二维码位置返回值
     /**
-    * IODO:Initial communication
+    * IODO: returns the value of the QR code set, and the X, y, Z, XYZ axes are flipped (corresponding position and flipping angle)
     */
     //% subcategory=sensor
     //% blockGap=8
@@ -471,7 +454,7 @@ namespace Quadruped {
 
     //###Line patrol return||巡线返回
     /**
-    * IODO:Line patrol identification returns the corresponding value
+    * IODO:status (1 and 0 are returned, 1 is recognized, 0 is not recognized), recognition effect (pixel value size of recognition line is 0-19200), deviation angle (- 90 ° -- 0 ° -- 90 °), deviation X-axis position (- 160 - 0 - 160,) return value (float)
     */
     //% subcategory=sensor
     //% blockGap=8
@@ -492,7 +475,7 @@ namespace Quadruped {
 
     //###Ball return value||小球返回值
     /**
-    * IODO:Identify the ball return value
+    * IODO:returns the return information of the graphic small ball, the recognition status (returns 1 and 0, 1 means recognized, 0 means unrecognized), the X and Y axis position of the ball center in the image, the two-dimensional width and height of the small ball, and the recognition effect (the higher the recognition effect, the distance of the small ball).Return value (float)
     */
     //% subcategory=sensor
     //% blockGap=8
