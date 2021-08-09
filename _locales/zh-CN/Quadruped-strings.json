@@ -16,7 +16,7 @@
     "Quadruped.Control_a|block":"控制 | %m| 角度 %speed1 |时间 %time1",
     "Quadruped.Ultrasound|block": "超声波 | 发射 %trig |接收 %echo |单位 %unit",
     "Quadruped.Infrared|block": "红外传感器 | 接收 %pin |模式 %value",
-    "Quadruped.Human_induction|block": "人体感应 | 接收 %pin |模式 %value",
+    "Quadruped.Human_induction|block": "人体感应 | 接收 %pin",
     "Quadruped.Select_gesture_as|block": "选择手势为 | %state",
     "Quadruped.GestureInit|block": "手势初始化",
     "Quadruped.GetGesture|block": "获取手势值",
