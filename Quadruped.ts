@@ -324,9 +324,9 @@ namespace Quadruped {
     //% subcategory=sensor
     //% blockGap=8
     //% blockId=sensor_Infrared block="Infrared |mode %value |pin %pin"
-    export function Infrared(pin: DigitalPin, value: obstacle_t,): boolean {
+    export function Infrared(pin: DigitalPin): number {
         pins.setPull(pin, PinPullMode.PullUp);
-        return pins.digitalReadPin(pin) == value;
+        return pins.digitalReadPin(pin);
     }
     //###Human body induction||人体感应
     /**
