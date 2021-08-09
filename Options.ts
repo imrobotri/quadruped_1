@@ -34,10 +34,10 @@ enum Mov_ang {
 enum gait {
     //% block="Trot"
     Trot,
-    //% block="Run_fast"
-    Run_fast
-//    //% block="Crawl"
-//    Crawl
+//    //% block="Run_fast"
+//    Run_fast
+    //% block="Crawl"
+    Crawl
 }
 
 //############Infrared||红外

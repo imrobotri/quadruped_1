@@ -157,26 +157,26 @@ namespace Quadruped {
                         return
                     }
                 }
-//            case gait.Crawl:
-//                gait_mode = 0x03;
-//                while (1) {
-//                    SPI_Send()
-//                    if (robot_mode == 6) {
-//                        SPI_Send()
-//                        //serial.writeNumber(2)
-//                        return
-//                    }
-//                }
-            case gait.Run_fast:
-                gait_mode = 0x02;
+            case gait.Crawl:
+                gait_mode = 0x03;
                 while (1) {
                     SPI_Send()
-                    if (robot_mode == 13) {
+                    if (robot_mode == 6) {
                         SPI_Send()
                         //serial.writeNumber(2)
                         return
-                    }
+                   }
                 }
+//            case gait.Run_fast:
+//                gait_mode = 0x02;
+//                while (1) {
+//                    SPI_Send()
+//                    if (robot_mode == 13) {
+//                        SPI_Send()
+//                        //serial.writeNumber(2)
+ //                       return
+//                    }
+//                }
         }
         SPI_Send()
     }
