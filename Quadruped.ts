@@ -165,16 +165,6 @@ namespace Quadruped {
                         return
                    }
                 }
-//            case gait.Run_fast:
-//                gait_mode = 0x02;
-//                while (1) {
-//                    SPI_Send()
-//                    if (robot_mode == 13) {
-//                        SPI_Send()
-//                        //serial.writeNumber(2)
- //                       return
-//                    }
-//                }
         }
         SPI_Send()
     }
